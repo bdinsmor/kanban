@@ -1,0 +1,20 @@
+<md-card class="widget">
+  <md-card-title fxLayout="row" fxLayoutAlign="center center">
+    <md-icon class="icon">{{ options.icon }}</md-icon>
+    <span class="name">{{ options.name }}</span>
+    <span fxFlex></span>
+    <span class="number">{{ options.number | number: '1.0-0' }}</span>
+  </md-card-title>
+  <md-card-subtitle>
+    <md-icon class="arrow"
+             [class.green]="options.gain > 0"
+             [class.red]="options.gain < 0">
+      {{ options.arrow }}
+    </md-icon>
+    <span class="description">{{ options.gain }}{{ options.description }}</span>
+  </md-card-subtitle>
+
+  <md-card-content>
+    <nvd3 class="fill-bg-opacity" [options]="chartOptions" [data]="data"></nvd3>
+  </md-card-content>
+</md-card>

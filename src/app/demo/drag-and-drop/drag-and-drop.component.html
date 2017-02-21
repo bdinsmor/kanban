@@ -1,0 +1,43 @@
+<div class="container" fxLayout="column" fxLayoutAlign="start center" style="height: 100%;">
+
+  <h1><md-icon class="middle">mouse</md-icon> Drag & Drop</h1>
+
+  <div class="list-container" fxLayout="column" fxLayoutAlign="center center">
+    <div class="md-elevation-z4">
+      <md-toolbar>Drag & Drop Anything!</md-toolbar>
+      <md-list [sortablejs]="listArray" [sortablejsOptions]="simpleOptions">
+        <md-list-item class="draggable" *ngFor="let list of listArray">
+          <img md-list-avatar [src]="list.image" alt="...">
+          <h3 md-line> {{ list.name }} </h3>
+          <p md-line>
+            <span class="title"> {{ list.subject }} </span>
+            <span class="extra"> -- {{ list.content }} </span>
+          </p>
+        </md-list-item>
+      </md-list>
+    </div>
+  </div>
+
+  <div class="list-container" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center" fxLayoutWrap="wrap">
+   <div class="list md-elevation-z4">
+     <md-toolbar>Group 1</md-toolbar>
+     <md-list [sortablejs]="listWithoutAvatarArray" [sortablejsOptions]="groupOptions">
+       <md-list-item class="small-list-item" *ngFor="let list of listWithoutAvatarArray">
+         <h3 class="middle" md-line> <md-icon class="drag-handle">drag_handle</md-icon> {{ list.name }} </h3>
+       </md-list-item>
+     </md-list>
+   </div>
+
+    <md-icon class="left-right-compare">compare_arrows</md-icon>
+
+    <div class="list md-elevation-z4">
+      <md-toolbar>Group 2</md-toolbar>
+      <md-list [sortablejs]="numberListArray" [sortablejsOptions]="groupOptions">
+        <md-list-item class="small-list-item" *ngFor="let list of numberListArray">
+          <h3 class="middle" md-line> <md-icon class="drag-handle">drag_handle</md-icon> {{ list.name }} </h3>
+        </md-list-item>
+      </md-list>
+    </div>
+  </div>
+
+</div>

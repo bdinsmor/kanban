@@ -1,0 +1,13 @@
+<div class="kanban-container" fxLayout="row" fxLayoutAlign="space-around stretch">
+  <div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutWrap="wrap" *ngFor="let col of kanbanSampleData">
+    <div class="kanban-column" fxLayout="column"  fxLayoutWrap="wrap">
+        <h3 md-subheader>{{col.key}}</h3>
+          <perfect-scrollbar>
+          <md-card *ngFor="let person of col.values">
+            <md-card-title>{{person.name}}</md-card-title>
+            <md-card-content>{{person.approvalDate}}</md-card-content>
+          </md-card>
+          </perfect-scrollbar>
+    </div>
+  </div>
+</div>

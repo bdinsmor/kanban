@@ -1,0 +1,43 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+  <md-card fxFlex="90%">
+    <md-card-title>Material Snack-Bars</md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content fxLayout="column">
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <div fxLayout="column">
+            <h3>Snack-Bar Notification</h3>
+            <p>Snack-Bars are a great way to display notifications to users or to give the user the status on something.</p>
+            <h5>Example:</h5>
+            <p><code [innerHTML]="getEscaped(snackbarTS)" msHighlight class="typescript"></code></p>
+          </div>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-card fxFlex="80%" fxFlex.sm="90%">
+                  <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                    <button md-button (click)="openSnackbar()">Trigger Snackbar</button>
+                  </md-card-content>
+                </md-card>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(snackbarHTML)" msHighlight class="html"></code>
+            </md-tab>
+            <md-tab label="TS">
+              <code [innerHTML]="getEscaped(snackbarTS)" msHighlight class="typescript"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+    </md-card-content>
+
+  </md-card>
+</div>
+

@@ -1,0 +1,41 @@
+<md-card class="widget source-overview-widget">
+  <md-card-title fxLayout="row" fxLayoutAlign="space-between center">
+    <span class="name">{{ options.name }}</span>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-card-title>
+
+  <md-divider></md-divider>
+
+  <md-card-content>
+    <div fxLayout="column" fxLayoutAlign="space-around stretch">
+
+      <div class="section" fxLayout="row" fxLayoutAlign="space-between center" *ngFor="let chartData of chartDataArray">
+        <div fxFlex="100px" fxLayout="row" fxLayoutAlign="center center" class="source" [style.background-color]="chartData[0].color">
+          {{ chartData[0].key }}
+        </div>
+        <span fxFlex fxLayout="row" fxLayoutAlign="center center" class="value">
+          {{ chartData[0].sum | number: '1.0-0' }}
+        </span>
+        <nvd3 fxFlex fxLayout="row" fxLayoutAlign="center center" [options]="chartOptions" [data]="chartData"></nvd3>
+      </div>
+
+    </div>
+  </md-card-content>
+</md-card>
+
+<md-menu #menu="mdMenu">
+  <button md-menu-item>
+    <md-icon> settings </md-icon>
+    <span> Settings </span>
+  </button>
+  <button md-menu-item disabled>
+    <md-icon> more </md-icon>
+    <span> More Info </span>
+  </button>
+  <button md-menu-item>
+    <md-icon> remove_circle </md-icon>
+    <span> Remove Widget </span>
+  </button>
+</md-menu>

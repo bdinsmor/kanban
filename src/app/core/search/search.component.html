@@ -1,0 +1,24 @@
+<div fxLayout="row" fxLayoutAlign="center stretch" style="height: 100%;">
+  <button class="search-button" md-button (click)="open()">
+    <md-icon>search</md-icon>
+  </button>
+  <md-input-container class="search" floatingPlaceholder="false" [class.search-open]="isOpen">
+    <input #input (blur)="close()" md-input placeholder="Search...">
+  </md-input-container>
+</div>
+
+
+<!--<div fxLayout="row" fxLayoutAlign="end center">
+  <div class="search-wrapper" fxLayout="row" [class.focus]="isFocused()" fxShow="false" fxShow.gt-md="true">
+    <md-icon class="search-icon">search</md-icon>
+    <input type="search"
+           autocomplete="off"
+           spellcheck="off"
+           class="search-input"
+           [(ngModel)]="search"
+           (focus)="focus()"
+           (blur)="blur()"
+           placeholder="Search">
+  </div>
+</div>
+-->

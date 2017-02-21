@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="height: 100%;">
+  <div class="login md-elevation-z12">
+    <div class="login-header" fxLayout="column" fxLayoutAlign="center center">
+      <img src="assets/img/icon.png">
+    </div>
+    <form #form="ngForm" (ngSubmit)="login()">
+      <div class="login-content" fxLayout="column" fxLayoutAlign="start stretch">
+          <md-input-container>
+            <input md-input placeholder="E-Mail" type="text" name="email" required [(ngModel)]="email">
+          </md-input-container>
+          <md-input-container>
+            <input md-input placeholder="Password" type="password" name="password" required [(ngModel)]="password">
+          </md-input-container>
+          <div class="extra-options" fxLayout="row" fxLayoutAlign="space-between center">
+            <md-checkbox class="remember-me">Remember Me</md-checkbox>
+            <a class="forgot-password" [routerLink]="['/forgot-password']">Forgot Password?</a>
+          </div>
+          <button color="primary" md-raised-button [disabled]="!form.valid">SIGN IN</button>
+        <p class="note">Don't have an account?<br/> <a [routerLink]="['/register']">Click here to create one</a></p>
+      </div>
+    </form>
+  </div>
+</div>

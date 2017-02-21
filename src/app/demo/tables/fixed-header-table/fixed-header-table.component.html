@@ -1,0 +1,58 @@
+<div fxLayout="column" fxLayout.gt-md="row" style="height: 100%;">
+  <md-card fxFlex.gt-md="300px" style="margin-right: 16px;">
+    <md-card-title>Fixed Header Table</md-card-title>
+    <md-card-content fxLayout="column">
+      <p>Try the checkboxes and see what happens.</p>
+      <md-checkbox [(ngModel)]="tableHover">
+        .table-hover
+      </md-checkbox>
+      <md-checkbox [(ngModel)]="tableStriped">
+        .table-striped
+      </md-checkbox>
+      <md-checkbox [(ngModel)]="tableCondensed">
+        .table-condensed
+      </md-checkbox>
+      <md-checkbox [(ngModel)]="tableBordered">
+        .table-bordered
+      </md-checkbox>
+    </md-card-content>
+  </md-card>
+
+  <div fxFlex class="table-container md-elevation-z2">
+
+    <div class="table-header" fxLayout="row" [class.table-condensed]="tableCondensed">
+      <div [style.width.px]="cellWidths[0]"></div>
+      <div [style.width.px]="cellWidths[1]" fxLayout="row" fxLayoutAlign="start center">
+        <span class="name">Name</span>
+      </div>
+      <div [style.width.px]="cellWidths[2]" fxLayout="row" fxLayoutAlign="start center">
+        <span class="name">Company</span>
+      </div>
+      <div [style.width.px]="cellWidths[3]" fxLayout="row" fxLayoutAlign="start center">
+        <span class="name">E-Mail</span>
+      </div>
+      <div [style.width.px]="cellWidths[4]" fxLayout="row" fxLayoutAlign="start center">
+        <span class="name">Phone</span>
+      </div>
+      <div [style.width.px]="cellWidths[5]" fxLayout="row" fxLayoutAlign="start center">
+        <span class="name">Balance</span>
+      </div>
+    </div>
+
+    <div class="table-content">
+      <table class="table" [class.table-hover]="tableHover" [class.table-striped]="tableStriped" [class.table-condensed]="tableCondensed" [class.table-bordered]="tableBordered">
+        <tbody #tbody>
+        <tr *ngFor="let row of rows">
+          <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
+          <td>{{ row.name.first }} {{ row.name.last }}</td>
+          <td>{{ row.company }}</td>
+          <td>{{ row.email }}</td>
+          <td>{{ row.phone }}</td>
+          <td>{{ row.balance }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 0 16px;
+  list-style: none;
+
+  li {
+    line-height: 64px;
+
+    md-icon {
+      margin: 0 8px;
+    }
+  }
+}

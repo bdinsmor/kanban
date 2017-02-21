@@ -1,0 +1,80 @@
+<div class="dashboard-container" fxLayout="column" fxLayoutAlign="start stretch">
+  <div fxLayout="row" fxLayoutAlign="center stretch" fxLayoutWrap="wrap">
+    <ms-bar-chart class="margin-bottom-sm"
+                  title="Total Sales" subTitle="Latest 10 May, 10:00" bgColor="linear-gradient(60deg, #8C99E0, #6572B8)" textColor="#FFFFFF" chartColor="#FFFFFF" gain="16.3" comparedTo="% compared to last month"
+                  [data]="discreteBarDemoData"
+                  fxFlex="100%" fxFlex.md="49.5%" fxFlex.sm="100%" fxFlex.gt-md>
+    </ms-bar-chart>
+    <ms-line-chart class="margin-bottom-sm"
+                   title="Visits" bgColor="linear-gradient(60deg, #4DD0E2, #4CA8BA)" textColor="#FFFFFF" chartColor="#FFFFFF" gain="42.5" comparedTo="% compared to last month"
+                   [data]="lineChartDemoData"
+                   fxFlex="100%" fxFlex.md="49.5%" fxFlex.sm="100%" fxFlex.gt-md fxFlexOffset.gt-sm="1%">
+    </ms-line-chart>
+    <ms-line-chart class="margin-top-md"
+                   title="Total Clicks" subTitle="Latest 10 May, 10:00" bgColor="linear-gradient(60deg, #81C683, #62A864)" textColor="#FFFFFF" chartColor="#FFFFFF" interpolate="true" gain="-6.1" comparedTo="% compared to last month"
+                   [data]="lineChartInterpolatedDemoData"
+                   fxFlex="100%" fxFlex.sm="100%" fxFlex.gt-md fxFlexOffset.gt-md="1%">
+    </ms-line-chart>
+  </div>
+
+  <div class="margin-top" fxLayout="row" fxLayoutAlign="center stretch" fxLayoutWrap="wrap">
+
+    <div class="margin-bottom-sm" fxLayout="column" fxFlex="100%" fxFlex.md="49.5%" fxFlex.gt-md>
+
+      <ms-traffic-sources [chartData]="trafficSourcesDemoData"></ms-traffic-sources>
+
+      <div class="margin-top">
+        <ms-activity [feeds]="activityFeedsDemoData"></ms-activity>
+      </div>
+    </div>
+
+    <div class="margin-bottom-sm" fxLayout="column" fxFlex.gt-md fxFlex="100%" fxFlex.md="49.5%" fxFlexOffset.gt-sm="1%">
+      <ms-pie-chart [data]="pieChartDemoData" title="Top 5 Categories" subTitle="Compared by sale share" textColor="#757575"></ms-pie-chart>
+
+      <div class="margin-top">
+        <md-card class="social-card">
+          <md-card-header>
+            <img md-card-avatar src="assets/img/avatars/3.png">
+            <md-card-subtitle>
+              Yesterday
+            </md-card-subtitle>
+            <md-card-title>Sophie Miller</md-card-title>
+          </md-card-header>
+          <img md-card-image src="assets/img/backgrounds/1.jpg">
+          <md-card-content>
+            <p>Piqued favour stairs it enable exeter as seeing. Remainder met improving but engrossed sincerity age.</p>
+          </md-card-content>
+          <md-divider></md-divider>
+          <md-card-actions>
+            <div fxLayout="row">
+              <button md-icon-button>
+                <md-icon>share</md-icon>
+              </button>
+              <button md-icon-button>
+                <md-icon>favorite</md-icon>
+              </button>
+              <span fxFlex></span>
+              <button md-button>
+                More Info
+              </button>
+              <button md-button>
+                Save as
+              </button>
+            </div>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+
+    <div class="margin-top-md" fxLayout="column" fxFlex.gt-md fxFlex="100%" fxFlex.sm="100%" fxFlexOffset.gt-md="1%">
+
+      <ms-recent-sales [sales]="recentSalesProductsDemoData" [chartData]="recentSalesDemoData"></ms-recent-sales>
+
+      <div class="margin-top">
+        <ms-google-maps-widget height="450px"></ms-google-maps-widget>
+      </div>
+    </div>
+
+  </div>
+
+</div>

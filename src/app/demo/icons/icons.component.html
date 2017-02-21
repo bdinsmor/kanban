@@ -1,0 +1,54 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+  <md-card fxFlex="90%">
+    <md-card-title>Material Buttons</md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content fxLayout="column">
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <div fxLayout="column">
+            <h3>Material Icons</h3>
+            <h4>&lt;md-icon&gt;</h4>
+            <p>Icons are a neat way to add some live to only-text lists. Our theme comes with a great variety of icons from the official Material Icons font.</p>
+            <h5>Example:</h5>
+            <p><code msHighlight class="html">&lt;md-icon&gt;grade&lt;/md-icon&gt;</code></p>
+          </div>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-card fxFlex="80%" fxFlex.sm="90%">
+                  <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                    <md-icon>grade</md-icon>
+                  </md-card-content>
+                </md-card>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(iconsHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div>
+        <h2>List of all Material Icons</h2>
+        <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+          <div fxLayout="column" fxLayoutAlign="center center" fxFlex="20%" *ngFor="let icon of icons">
+            <md-icon>{{ icon }}</md-icon>
+            <span class="icon-name">{{ icon }}</span>
+          </div>
+        </div>
+      </div>
+
+
+    </md-card-content>
+
+  </md-card>
+</div>
+

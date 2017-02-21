@@ -1,0 +1,48 @@
+<div fxLayout="column" fxLayout.gt-md="row">
+  <md-card fxFlex.gt-md="300px" style="margin-right: 16px;">
+    <md-card-title>Simple Table</md-card-title>
+    <md-card-content fxLayout="column">
+      <p>Try the checkboxes and see what happens.</p>
+      <md-checkbox [(ngModel)]="tableHover">
+        .table-hover
+      </md-checkbox>
+      <md-checkbox [(ngModel)]="tableStriped">
+        .table-striped
+      </md-checkbox>
+      <md-checkbox [(ngModel)]="tableCondensed">
+        .table-condensed
+      </md-checkbox>
+      <md-checkbox [(ngModel)]="tableBordered">
+        .table-bordered
+      </md-checkbox>
+    </md-card-content>
+  </md-card>
+
+  <div fxFlex class="md-elevation-z2">
+
+    <table class="table" [class.table-hover]="tableHover" [class.table-striped]="tableStriped" [class.table-condensed]="tableCondensed" [class.table-bordered]="tableBordered">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Company</th>
+        <th>E-Mail</th>
+        <th>Phone</th>
+        <th>Balance</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let row of rows">
+        <td class="avatar-cell"><img class="avatar" [src]="row.picture"></td>
+        <td>{{ row.name.first }} {{ row.name.last }}</td>
+        <td>{{ row.company }}</td>
+        <td>{{ row.email }}</td>
+        <td>{{ row.phone }}</td>
+        <td>{{ row.balance }}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

@@ -1,0 +1,45 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+  <md-card fxFlex="90%">
+    <md-card-title>Material Grid List</md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content fxLayout="column">
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <div fxLayout="column">
+            <h3>Grid List</h3>
+            <h4>&lt;md-grid-list&gt;</h4>
+            <p>An md-grid-list is an alternative list view that arranges cells into grid-based layout.</p>
+            <h5>Example:</h5>
+            <p><code msHighlight class="html">&lt;md-grid-list cols="4"&gt;<br/>  &lt;md-grid-tile&gt;Content 1&lt;/md-grid-tile&gt;<br/>&lt;/md-grid-list&gt;</code></p>
+          </div>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-card fxFlex="80%" fxFlex.sm="90%">
+                  <md-card-content>
+                    <md-grid-list cols="4" rowHeight="100px">
+                      <md-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows"
+                                    [style.background]="tile.color">
+                        {{tile.text}}
+                      </md-grid-tile>
+                    </md-grid-list>
+                  </md-card-content>
+                </md-card>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(gridListHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+    </md-card-content>
+
+  </md-card>
+</div>

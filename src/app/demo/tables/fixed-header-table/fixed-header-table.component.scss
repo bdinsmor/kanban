@@ -1,0 +1,50 @@
+@import "../../../../styles/_var";
+
+$height__table-header: 51px;
+$height__main-toolbar__plus_8px: $height__main-toolbar + 8px;
+
+:host {
+  display: block;
+  height: calc(100% - #{$height__main-toolbar__plus_8px});
+  margin: 36px;
+  position: relative;
+}
+
+.table-container {
+  height: 100%;
+}
+
+.table-header {
+  height: $height__table-header;
+  background-color: #fff;
+  color: #757575;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+
+  & > div {
+    vertical-align: bottom;
+
+    & > .name {
+      padding-left: 16px;
+    }
+  }
+
+  &.table-condensed {
+    & > div {
+      & > .name {
+        padding-left: 8px;
+      }
+    }
+  }
+}
+
+.table-content {
+  height: calc(100% - #{$height__table-header});
+  overflow: auto;
+}
+
+.avatar-cell {
+  text-align: center;
+  width: 40px;
+  padding-left: 24px;
+  padding-right: 8px;
+}

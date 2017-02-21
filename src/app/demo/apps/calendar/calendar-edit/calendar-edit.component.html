@@ -1,0 +1,26 @@
+<div class="event-edit">
+  <div md-dialog-title>
+    Edit Event
+  </div>
+  <div class="content" md-dialog-content>
+    <p fxLayout="row">
+      <md-input-container fxFlex>
+        <input md-input placeholder="Event Name" [(ngModel)]="event.title">
+      </md-input-container>
+    </p>
+    <p fxLayout="row">
+      <md-input-container fxFlex>
+        <input md-input placeholder="Event Start Time" [(ngModel)]="eventStart">
+      </md-input-container>
+    </p>
+    <p fxLayout="row">
+      <md-input-container fxFlex>
+        <input md-input placeholder="Event End Time" [(ngModel)]="eventEnd">
+      </md-input-container>
+    </p>
+  </div>
+  <div md-dialog-actions fxLayout="row" fxLayoutAlign="end center">
+    <button md-dialog-close md-button>Cancel</button>
+    <button class="save" md-raised-button color="primary" (click)="save()">Save</button>
+  </div>
+</div>

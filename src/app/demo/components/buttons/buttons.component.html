@@ -1,0 +1,195 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+  <md-card fxFlex="90%">
+    <md-card-title>Material Buttons</md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content fxLayout="column">
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <div fxLayout="column">
+            <h3>Flat Buttons</h3>
+            <h4>&lt;md-button&gt;</h4>
+            <p>Flat buttons are printed on material. They do not lift, but fill with color on press.</p>
+            <h5>Example:</h5>
+            <p><code msHighlight class="html">&lt;button md-button&gt;Button&lt;/button&gt;</code></p>
+          </div>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-card fxFlex="80%" fxFlex.sm="90%">
+                  <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                    <button md-button>Button</button>
+                    <button md-button color="primary">Primary</button>
+                    <button md-button color="accent">Accent</button>
+                    <button md-button color="warn">Warn</button>
+                    <button md-button disabled="true">Disabled</button>
+                  </md-card-content>
+                </md-card>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(flatButtonsHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <h3>Raised Buttons</h3>
+          <h4>&lt;md-raised-button&gt;</h4>
+          <p>Raised buttons add dimension to mostly flat layouts. They emphasize functions on busy or wide spaces.</p>
+          <h5>Example:</h5>
+          <p><code msHighlight class="html">&lt;button md-raised-button&gt;<br/>  Button<br/>&lt;/button&gt;</code></p>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-card fxFlex="80%" fxFlex.sm="90%">
+                  <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                    <button md-raised-button>Button</button>
+                    <button md-raised-button color="primary">Primary</button>
+                    <button md-raised-button color="accent">Accent</button>
+                    <button md-raised-button color="warn">Warn</button>
+                    <button md-raised-button disabled="true">Disabled</button>
+                  </md-card-content>
+                </md-card>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(raisedButtonsHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <h3>Floating Action Buttons (FAB)</h3>
+          <h4>&lt;md-fab&gt;</h4>
+          <p>Floating action buttons are used for a promoted action. They are distinguished by a circled icon floating above the UI and have motion behaviors that include morphing, launching, and a transferring anchor point.</p>
+          <h5>md-fab Example:</h5>
+          <p><code msHighlight class="html">&lt;button md-fab&gt;<br/>  &lt;md-icon&gt;grade&lt;/md-icon&gt;<br/>&lt;/button&gt;</code></p>
+          <h5>md-mini-fab Example:</h5>
+          <p><code msHighlight class="html">&lt;button md-mini-fab&gt;<br/>  &lt;md-icon&gt;favorite&lt;/md-icon&gt;<br/>&lt;/button&gt;</code></p>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <div fxFlex="80%" fxFlex.sm="90%" fxLayout="column">
+                  <md-card>
+                    <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                      <button md-fab color="primary"><md-icon>grade</md-icon></button>
+                      <button md-fab color="accent"><md-icon>favorite</md-icon></button>
+                      <button md-fab color="warn"><md-icon>build</md-icon></button>
+                      <button md-fab disabled="true"><md-icon>lock</md-icon></button>
+                    </md-card-content>
+                  </md-card>
+                  <md-card>
+                    <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                      <button md-mini-fab color="primary"><md-icon>favorite</md-icon></button>
+                      <button md-mini-fab color="accent"><md-icon>thumb_up</md-icon></button>
+                      <button md-mini-fab color="warn"><md-icon>build</md-icon></button>
+                      <button md-mini-fab disabled="true"><md-icon>lock</md-icon></button>
+                    </md-card-content>
+                  </md-card>
+                </div>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(fabHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <h3>Button Toggle</h3>
+          <h4>&lt;md-button-toggle&gt;</h4>
+          <p>Toggle buttons may be used to group related options. Arrange layout and spacing to convey that certain toggle buttons are part of a group.</p>
+          <h5>Example:</h5>
+          <p><code msHighlight class="html">&lt;md-button-toggle&gt;<br/>  &lt;md-icon&gt;favorite&lt;/md-icon&gt;<br/>&lt;/md-button-toggle&gt;</code></p>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <div fxFlex="80%" fxFlex.sm="90%" fxLayout="column">
+                  <md-card>
+                    <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                      <md-button-toggle-group name="alignment">
+                        <md-button-toggle value="left"><md-icon>format_align_left</md-icon></md-button-toggle>
+                        <md-button-toggle value="center"><md-icon>format_align_center</md-icon></md-button-toggle>
+                        <md-button-toggle value="right"><md-icon>format_align_right</md-icon></md-button-toggle>
+                        <md-button-toggle value="justify"><md-icon>format_align_justify</md-icon></md-button-toggle>
+                      </md-button-toggle-group>
+                      <md-button-toggle-group multiple>
+                        <md-button-toggle>Flour</md-button-toggle>
+                        <md-button-toggle>Eggs</md-button-toggle>
+                        <md-button-toggle>Sugar</md-button-toggle>
+                        <md-button-toggle>Milk</md-button-toggle>
+                      </md-button-toggle-group>
+                    </md-card-content>
+                  </md-card>
+                </div>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(buttonToggleHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <h3>Icon Buttons</h3>
+          <h4>&lt;md-icon-button&gt;</h4>
+          <p>A circular material button that only contains an icon and displays an ink reaction on press.</p>
+          <h5>Example:</h5>
+          <p><code msHighlight class="html">&lt;button md-icon-button&gt;<br/>  &lt;md-icon&gt;grade&lt;/md-icon&gt;<br/>&lt;/button&gt;</code></p>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <div fxFlex="80%" fxFlex.sm="90%" fxLayout="column">
+                  <md-card>
+                    <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-around center" fxLayoutWrap="wrap">
+                      <button md-icon-button><md-icon>menu</md-icon></button>
+                      <button md-icon-button color="primary"><md-icon>grade</md-icon></button>
+                      <button md-icon-button color="accent"><md-icon>favorite</md-icon></button>
+                      <button md-icon-button color="warn"><md-icon>build</md-icon></button>
+                      <button md-icon-button disabled="true"><md-icon>lock</md-icon></button>
+                    </md-card-content>
+                  </md-card>
+                </div>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(iconButtonHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+    </md-card-content>
+
+  </md-card>
+</div>
+

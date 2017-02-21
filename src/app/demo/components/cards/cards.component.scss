@@ -1,0 +1,13 @@
+:host {
+  display: block;
+}
+
+md-card-subtitle:not(:first-child), md-card-title:not(:first-child) {
+  margin-top: -14px;
+}
+
+.demo-preview {
+  md-card > md-card-content > * {
+    margin: 0;
+  }
+}

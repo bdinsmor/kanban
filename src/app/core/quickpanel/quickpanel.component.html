@@ -1,0 +1,126 @@
+<md-tab-group>
+  <md-tab label="Overview">
+      <perfect-scrollbar class="overflow-container">
+          <div class="text-padding">
+            <p>TODAY</p>
+            <p class="h1">
+              <span>{{ todayDay }}</span> <br/>
+              <span>{{ todayDate }}</span><span style="font-size: 18px; vertical-align: top;">{{ todayDateSuffix }}</span><span>{{ todayMonth }}</span>
+            </p>
+          </div>
+
+          <md-divider></md-divider>
+
+          <md-nav-list>
+            <h3 md-subheader>Upcoming Events</h3>
+            <a href="javascript:;" md-list-item>
+              <h4 md-line>Business Meeting</h4>
+              <p md-line>In 16 Minutes, Meeting Room</p>
+            </a>
+            <a href="javascript:;" md-list-item>
+              <h4 md-line>Ask for Vacation</h4>
+              <p md-line>12:00 PM</p>
+            </a>
+            <a href="javascript:;" md-list-item>
+              <h4 md-line>Dinner with Sophie</h4>
+              <p md-line>18:30 PM</p>
+            </a>
+            <a href="javascript:;" md-list-item>
+              <h4 md-line>Deadline for Project X</h4>
+              <p  md-line>21:00 PM</p>
+            </a>
+            <md-divider></md-divider>
+            <h3 md-subheader>TODO-List</h3>
+            <a md-list-item>
+              <h4 md-line>Invite Jack to play golf</h4>
+              <p md-line>Added: 6 hours ago</p>
+            </a>
+            <a md-list-item>
+              <h4 md-line>Get to know Angular more</h4>
+              <p md-line>Added: 2 days ago</p>
+            </a>
+            <a md-list-item>
+              <h4 md-line>Configure that new router</h4>
+              <p md-line>Added: 5 days ago</p>
+            </a>
+            <md-divider></md-divider>
+            <h3 md-subheader>Server Statistics</h3>
+            <a md-list-item>
+              <p md-line>CPU Load (71% / 100%)</p>
+              <p md-line><md-progress-bar mode="determinate" color="primary" value="71"></md-progress-bar></p>
+            </a>
+            <a md-list-item>
+              <p md-line>RAM Usage (6,175 MB / 16,384 MB)</p>
+              <p md-line><md-progress-bar mode="determinate" color="accent" value="34"></md-progress-bar></p>
+            </a>
+            <a md-list-item>
+              <p md-line>CPU Temp (43° / 80°)</p>
+              <p md-line><md-progress-bar mode="determinate" color="warn" value="54"></md-progress-bar></p>
+            </a>
+          </md-nav-list>
+      </perfect-scrollbar>
+  </md-tab>
+  <md-tab label="Notifications">
+    <perfect-scrollbar class="overflow-container">
+      <md-nav-list>
+        <h3 md-subheader>Friends</h3>
+        <a href="javascript:;" md-list-item>
+          <img md-list-avatar src="assets/img/avatars/1.png">
+          <h3 md-line> Sophie </h3>
+          <p md-line>
+            <span> Dinner? </span>
+            <span class=""> -- Are we still going out tonight? </span>
+          </p>
+        </a>
+        <a href="javascript:;" md-list-item>
+          <img md-list-avatar src="assets/img/avatars/4.png">
+          <h3 md-line> Jack </h3>
+          <p md-line>
+            <span> Golf weekend </span>
+            <span class=""> -- Hey! You wanted to go play Golf? </span>
+          </p>
+        </a>
+        <a href="javascript:;" md-list-item>
+          <img md-list-avatar src="assets/img/avatars/9.png">
+          <h3 md-line> Cody </h3>
+          <p md-line>
+            <span> Code Quality </span>
+            <span class=""> -- Love your newest theme, so clean and slick! </span>
+          </p>
+        </a>
+        <a href="javascript:;" md-list-item>
+          <img md-list-avatar src="assets/img/avatars/16.png">
+          <h3 md-line> James </h3>
+          <p md-line>
+            <span> Gaming? </span>
+            <span class=""> -- You wanna throw a party this weekend? </span>
+          </p>
+        </a>
+        <a href="javascript:;" md-list-item>
+          <img md-list-avatar src="assets/img/avatars/19.png">
+          <h3 md-line> Jessica </h3>
+          <p md-line>
+            <span> Love you... </span>
+            <span class=""> -- Hope we can see us again soon :) </span>
+          </p>
+        </a>
+
+        <md-divider></md-divider>
+
+        <h3 md-subheader>Server Statistics</h3>
+        <a md-list-item>
+          <p md-line>CPU Load (71% / 100%)</p>
+          <p md-line><md-progress-bar mode="determinate" color="primary" value="71"></md-progress-bar></p>
+        </a>
+        <a md-list-item>
+          <p md-line>RAM Usage (6,175 MB / 16,384 MB)</p>
+          <p md-line><md-progress-bar mode="determinate" color="accent" value="34"></md-progress-bar></p>
+        </a>
+        <a md-list-item>
+          <p md-line>CPU Temp (43° / 80°)</p>
+          <p md-line><md-progress-bar mode="determinate" color="warn" value="54"></md-progress-bar></p>
+        </a>
+      </md-nav-list>
+    </perfect-scrollbar>
+  </md-tab>
+</md-tab-group>

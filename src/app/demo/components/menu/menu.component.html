@@ -1,0 +1,94 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+  <md-card fxFlex="90%">
+    <md-card-title>Material Menu</md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content fxLayout="column">
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <div fxLayout="column">
+            <h3>Menu with Icons</h3>
+            <h4>&lt;md-menu&gt;</h4>
+            <p>Menus offer a list of options that are displayed when triggered. The position (before, after) and (above, below) is automatically decided, but can be overridden with e.g. x-position='before'.</p>
+            <h5>Example:</h5>
+            <p><code msHighlight class="html">&lt;md-menu&gt;<br/>  &lt;button md-menu-item&gt;<br/>    &lt;md-icon&gt;dialpad&lt;/md-icon&gt;<br/>  &lt;/button&gt;<br/>&lt;/md-menu&gt;</code></p>
+          </div>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-card fxFlex="80%" fxFlex.sm="90%">
+                  <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center">
+                    <button md-icon-button [mdMenuTriggerFor]="menu">
+                      <md-icon>more_vert</md-icon>
+                    </button>
+
+                    <md-menu #menu="mdMenu">
+                      <button md-menu-item>
+                        <md-icon> dialpad </md-icon>
+                        <span> Redial </span>
+                      </button>
+                      <button md-menu-item disabled>
+                        <md-icon> voicemail </md-icon>
+                        <span> Check voicemail </span>
+                      </button>
+                      <button md-menu-item>
+                        <md-icon> notifications_off </md-icon>
+                        <span> Disable alerts </span>
+                      </button>
+                    </md-menu>
+                  </md-card-content>
+                </md-card>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(menuHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+
+        <div fxFlex>
+          <h3>Menu without Icons</h3>
+          <div class="demo-tabs md-elevation-z2" fxFlex>
+            <md-tab-group>
+              <md-tab label="PREVIEW">
+                <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                  <md-card fxFlex="80%" fxFlex.sm="90%">
+                    <md-card-content fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center">
+                      <button md-icon-button [mdMenuTriggerFor]="menu2">
+                        <md-icon>grade</md-icon>
+                      </button>
+
+                      <md-menu #menu2="mdMenu">
+                        <button md-menu-item> Refresh </button>
+                        <button md-menu-item> Settings </button>
+                        <button md-menu-item> Help </button>
+                        <button md-menu-item disabled> Sign Out </button>
+                      </md-menu>
+                    </md-card-content>
+                  </md-card>
+                </div>
+              </md-tab>
+              <md-tab label="HTML">
+                <code [innerHTML]="getEscaped(menu2HTML)" msHighlight class="html"></code>
+              </md-tab>
+            </md-tab-group>
+          </div>
+        </div>
+
+      </div>
+
+    </md-card-content>
+
+  </md-card>
+</div>
+
+

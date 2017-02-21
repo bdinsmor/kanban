@@ -1,0 +1,171 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+  <md-card fxFlex="90%">
+    <md-card-title>Material Lists</md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content fxLayout="column">
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <div fxLayout="column">
+            <h3>Two-Line List with Avatars</h3>
+            <h4>&lt;md-list&gt;</h4>
+            <p>Lists are made up of a continuous column of rows. Each row contains a tile. Primary actions fill the tile, and supplemental actions are represented by icons and text.</p>
+            <h5>Example:</h5>
+            <p><code msHighlight class="html">&lt;md-list&gt;<br/>  &lt;md-list-item&gt;<br/>    &lt;img md-list-avatar src="avatar.png"&gt;<br/>    &lt;h3 md-line&gt;John&lt;/h3&gt;<br/>    &lt;p md-line&gt;Brunch?&lt;/p&gt;<br/>  &lt;md-list-item&gt;<br/>&lt;/md-list&gt;</code></p>
+          </div>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-list class="demo-list md-elevation-z2">
+                  <md-list-item>
+                    <img md-list-avatar src="assets/img/avatars/1.png">
+                    <h3 md-line>John</h3>
+                    <p md-line>
+                      <span>Brunch?</span>
+                      <span class="subline">-- Did you want to go on Sunday? I was thinking</span>
+                    </p>
+                  </md-list-item>
+                  <md-list-item>
+                    <img md-list-avatar src="assets/img/avatars/2.png">
+                    <h3 md-line>Peter</h3>
+                    <p md-line>
+                      <span>Summer BBQ</span>
+                      <span class="subline">-- Wish I could come, but I have some special</span>
+                    </p>
+                  </md-list-item>
+                  <md-list-item>
+                    <img md-list-avatar src="assets/img/avatars/3.png">
+                    <h3 md-line>Nancy</h3>
+                    <p md-line>
+                      <span>Oui oui</span>
+                      <span class="subline">-- Have you booked the Paris trip?</span>
+                    </p>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(twoLineListHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+        <div fxFlex fxFlex.gt-md="30%" style="margin-right: 24px;">
+          <h3>Three-Line List with Avatars</h3>
+          <p>Lists with three lines add extra content to distinguish your list-item.</p>
+          <h5>Example:</h5>
+          <p><code msHighlight class="html">&lt;md-list&gt;<br/>  &lt;md-list-item&gt;<br/>    &lt;img md-list-avatar src="avatar.png"&gt;<br/>    &lt;h3 md-line&gt;John&lt;/h3&gt;<br/>    &lt;p md-line&gt;Brunch?&lt;/p&gt;<br/>    &lt;p md-line class="subline"&gt;<br/>      Did you want to go on Sunday?<br/>    &lt;/p&gt;<br/>  &lt;md-list-item&gt;<br/>&lt;/md-list&gt;</code></p>
+        </div>
+        <div class="demo-tabs md-elevation-z2" fxFlex>
+          <md-tab-group>
+            <md-tab label="PREVIEW">
+              <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                <md-list class="demo-list md-elevation-z2">
+                  <md-list-item>
+                    <img md-list-avatar src="assets/img/avatars/1.png">
+                    <h3 md-line>John</h3>
+                    <p md-line>Brunch?</p>
+                    <p md-line class="subline">Did you want to go on Sunday? I was thinking</p>
+                  </md-list-item>
+                  <md-list-item>
+                    <img md-list-avatar src="assets/img/avatars/2.png">
+                    <h3 md-line>Peter</h3>
+                    <p md-line>Summer BBQ</p>
+                    <p md-line class="subline">Wish I could come, but I have some special</p>
+                  </md-list-item>
+                  <md-list-item>
+                    <img md-list-avatar src="assets/img/avatars/3.png">
+                    <h3 md-line>Nancy</h3>
+                    <p md-line>Oui oui</p>
+                    <p md-line class="subline">Have you booked the Paris trip?</p>
+                  </md-list-item>
+                </md-list>
+              </div>
+            </md-tab>
+            <md-tab label="HTML">
+              <code [innerHTML]="getEscaped(threeLineListHTML)" msHighlight class="html"></code>
+            </md-tab>
+          </md-tab-group>
+        </div>
+      </div>
+
+      <md-divider></md-divider>
+
+      <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="start stretch" fxLayoutAlign.gt-md="start start" style="margin: 24px 0">
+
+        <div fxFlex>
+          <h3>Three-Line List</h3>
+          <div class="demo-tabs md-elevation-z2" fxFlex>
+            <md-tab-group>
+              <md-tab label="PREVIEW">
+                <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                  <md-list class="demo-list md-elevation-z2">
+                    <md-list-item>
+                      <h3 md-line>John</h3>
+                      <p md-line>Brunch?</p>
+                      <p md-line class="subline">Did you want to go on Sunday? I was thinking</p>
+                    </md-list-item>
+                    <md-list-item>
+                      <h3 md-line>Peter</h3>
+                      <p md-line>Summer BBQ</p>
+                      <p md-line class="subline">Wish I could come, but I have some special</p>
+                    </md-list-item>
+                    <md-list-item>
+                      <h3 md-line>Nancy</h3>
+                      <p md-line>Oui oui</p>
+                      <p md-line class="subline">Have you booked the Paris trip?</p>
+                    </md-list-item>
+                  </md-list>
+                </div>
+              </md-tab>
+              <md-tab label="HTML">
+                <code [innerHTML]="getEscaped(threeLineListWithoutAvatarsHTML)" msHighlight class="html"></code>
+              </md-tab>
+            </md-tab-group>
+          </div>
+        </div>
+
+        <span fxFlex="24px"></span>
+
+        <div fxFlex>
+          <h3>One-Line List</h3>
+          <div class="demo-tabs md-elevation-z2">
+            <md-tab-group>
+              <md-tab label="PREVIEW">
+                <div class="demo-preview" fxLayout="row" fxLayoutAlign="center center">
+                  <md-list class="demo-list md-elevation-z2">
+                    <md-list-item>
+                      <h3 md-line>John</h3>
+                    </md-list-item>
+                    <md-list-item>
+                      <h3 md-line>Peter</h3>
+                    </md-list-item>
+                    <md-list-item>
+                      <h3 md-line>Nancy</h3>
+                    </md-list-item>
+                  </md-list>
+                </div>
+              </md-tab>
+              <md-tab label="HTML">
+                <code [innerHTML]="getEscaped(oneLineList)" msHighlight class="html"></code>
+              </md-tab>
+            </md-tab-group>
+          </div>
+        </div>
+
+      </div>
+
+    </md-card-content>
+
+  </md-card>
+</div>
+
+

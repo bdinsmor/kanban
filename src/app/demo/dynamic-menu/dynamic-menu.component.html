@@ -1,0 +1,17 @@
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+  <md-card fxFlex="90%">
+    <md-card-title>Dynamic Menu</md-card-title>
+
+    <md-divider></md-divider>
+
+    <md-card-content fxLayout="column">
+      <p style="margin-top: 24px;">The side-navigation is dynamic. You can add and remove items anytime.</p>
+      <h4>Example:</h4>
+      <button md-raised-button color="primary" (click)="toggleMenuItem()" *ngIf="!item">Add Dynamic Menu-Item</button>
+      <button style="margin: 8px 0;" md-raised-button color="warn" (click)="toggleMenuItem()" *ngIf="item">Remove Dynamic Menu-Item</button>
+
+    </md-card-content>
+
+  </md-card>
+</div>
+

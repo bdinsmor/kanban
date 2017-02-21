@@ -1,0 +1,74 @@
+<div fxLayout="column" fxLayoutAlign="center stretch">
+
+  <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="space-between stretch">
+
+    <div fxLayout="column" fxLayout.gt-md="row" fxFlex="100%" fxFlex.gt-sm>
+      <ms-widget-v1 [data]="widget1Data" [options]="widget1Options" fxFlex="100%" fxFlex.gt-sm></ms-widget-v1>
+
+      <ms-widget-v1 [data]="widget2Data" [options]="widget2Options" fxFlex="100%" fxFlex.gt-sm></ms-widget-v1>
+
+    </div>
+
+    <div fxLayout="column" fxLayout.gt-md="row" fxFlex="100%" fxFlex.gt-sm>
+      <ms-widget-v1 [data]="widget3Data" [options]="widget3Options" fxFlex="100%" fxFlex.gt-sm></ms-widget-v1>
+
+      <ms-widget-v1 [data]="widget4Data" [options]="widget4Options" fxFlex="100%" fxFlex.gt-sm></ms-widget-v1>
+    </div>
+
+  </div>
+
+  <div fxLayout="column" fxLayout.gt-md="row" fxLayoutAlign="center stretch">
+    <ms-line-chart-widget fxFlex="70%" [data]="lineChartWidgetData" [options]="lineChartWidgetOptions"></ms-line-chart-widget>
+    <ms-source-overview-widget fxFlex="30%" fxLayout="column" fxLayout.gt-md="row" [chartDataArray]="sourceOverviewWidgetData" [options]="sourceOverviewWidgetOptions"></ms-source-overview-widget>
+  </div>
+
+  <div fxLayout="row">
+    <md-card class="widget" fxFlex>
+      <md-card-title fxLayout="row" fxLayoutAlign="space-between center">
+        <span>Team Members</span>
+        <button md-icon-button [mdMenuTriggerFor]="teamMenu">
+          <md-icon>more_vert</md-icon>
+        </button>
+      </md-card-title>
+      <md-card-content>
+        <table class="table table-hover table-condensed">
+          <thead>
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>E-Mail</th>
+            <th>Phone</th>
+            <th>Balance</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let member of team">
+            <td style="width: 40px;"><img class="avatar" [src]="member.picture"></td>
+            <td>{{ member.name.first }} {{ member.name.last }}</td>
+            <td>{{ member.company }}</td>
+            <td>{{ member.email }}</td>
+            <td>{{ member.phone }}</td>
+            <td>{{ member.balance }}</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <md-menu #teamMenu="mdMenu">
+          <button md-menu-item>
+            <md-icon> settings </md-icon>
+            <span> Settings </span>
+          </button>
+          <button md-menu-item disabled>
+            <md-icon> more </md-icon>
+            <span> More Info </span>
+          </button>
+          <button md-menu-item>
+            <md-icon> remove_circle </md-icon>
+            <span> Remove Widget </span>
+          </button>
+        </md-menu>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

@@ -1,0 +1,72 @@
+<md-sidenav-container>
+
+  <md-sidenav class="quickpanel" [opened]="quickpanelOpen" align="end" mode="over" #quickpanel>
+
+    <ms-quickpanel></ms-quickpanel>
+
+  </md-sidenav>
+
+  <md-sidenav class="sidenav" [opened]="sidenavOpen" align="start" [mode]="sidenavMode" msIconSidenav #sidenav>
+
+    <ms-sidenav></ms-sidenav>
+
+  </md-sidenav>
+
+  <md-toolbar class="main-toolbar md-elevation-z2">
+    <div fxHide="false" fxHide.gt-sm>
+      <button (click)="sidenav.open()" md-icon-button>
+        <md-icon>menu</md-icon>
+      </button>
+    </div>
+
+    <ms-breadcrumbs fxHide="true" fxHide.gt-sm="false"></ms-breadcrumbs>
+
+    <span fxFlex></span>
+
+    <button fxHide="true" fxHide.gt-sm="false" md-button class="fullscreen-toggle" (click)="toggleFullscreen()">
+      <md-icon *ngIf="!isFullscreen">fullscreen</md-icon>
+      <md-icon *ngIf="isFullscreen">fullscreen_exit</md-icon>
+    </button>
+
+    <ms-search></ms-search>
+
+    <button class="user-button" md-button [mdMenuTriggerFor]="menu">
+      <div fxLayout="row" fxLayoutAlign="start center">
+        <img src="assets/img/avatars/noavatar.png" class="avatar-flex"/>
+        <span fxHide="true" fxHide.gt-sm="false" style="font-weight: 500; margin-left: 5px;">David Smith</span>
+        <md-icon fxHide="true" fxHide.gt-sm="false">keyboard_arrow_down</md-icon>
+      </div>
+    </button>
+
+
+    <button md-button class="quickpanel-toggle" (click)="quickpanel.open()">
+      <md-icon>format_align_right</md-icon>
+    </button>
+
+
+    <md-menu class="user-menu" x-position="before" y-position="below" #menu="mdMenu">
+      <button md-menu-item>
+        <md-icon>account_circle</md-icon>
+        <span>Profile</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>settings</md-icon>
+        <span>Settings</span>
+      </button>
+      <button md-menu-item>
+        <md-icon>help</md-icon>
+        <span>Help</span>
+      </button>
+      <md-divider></md-divider>
+      <button [routerLink]="['/login']" md-menu-item>
+        <md-icon>exit_to_app</md-icon>
+        <span>Logout</span>
+      </button>
+    </md-menu>
+  </md-toolbar>
+
+  <div class="main-container" #scrollContainer>
+    <router-outlet (activate)="onActivate($event, scrollContainer)"></router-outlet>
+  </div>
+
+</md-sidenav-container>

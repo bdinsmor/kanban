@@ -1,0 +1,45 @@
+<div class="inbox-compose">
+  <div md-dialog-content fxLayout="row" fxLayoutAlign="space-between center">
+    <span>New Email</span>
+    <button md-dialog-close md-icon-button>
+      <md-icon>close</md-icon>
+    </button>
+  </div>
+  <div class="content" md-dialog-content>
+    <p>
+      <md-input-container class="input-container">
+        <input md-input placeholder="To">
+      </md-input-container>
+    </p>
+
+    <p>
+      <md-input-container class="input-container">
+        <input md-input placeholder="From" disabled value="david.smith@demomail.com">
+      </md-input-container>
+    </p>
+
+    <p>
+      <md-input-container class="input-container">
+        <input md-input placeholder="Title">
+      </md-input-container>
+    </p>
+
+    <p class="editor">
+      <quill-editor></quill-editor>
+    </p>
+
+  </div>
+  <div md-dialog-actions fxLayout="row">
+    <button md-dialog-close md-icon-button>
+      <md-icon>delete</md-icon>
+    </button>
+    <span fxFlex><!-- fill space --></span>
+    <button md-icon-button>
+      <md-icon>attachment</md-icon>
+    </button>
+    <button (click)="send()" class="send" md-raised-button color="primary">
+      Send <md-icon>send</md-icon>
+    </button>
+  </div>
+
+</div>
